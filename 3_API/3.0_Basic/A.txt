@@ -1,0 +1,94 @@
+# API : Application Programming Interface
+
+# API_HUB :  https://github.com/hiteshchoudhary/apihub.git
+
+--> An Application Programming Interface (API) is a set of
+    commands, functions, protocols and objects that programmers
+    can use to create software or interact with an external 
+    system 
+
+                Request
+--> [server1] <---------> [server2]
+                Response
+
+                Request
+--> [server1] <-( API )-> [server2]
+                Response
+
+                  GET                    GET
+                Request                Request
+--> [BROWSER] <---------> [MY server2] <--( API )--> [OTHER server2]
+                Response               Response
+
+--> Give the data in JSON format
+
+# Component of API :
+
+1) Endpoint :  It is access point to send the HTTP request to and get your response
+
+2) Paths : [URL --> Endpoint/Paths]
+
+3) Parameters : [URL --> Endpoint/Paths?Parameter=value]
+
+4) Query : [URL --> Endpoint/Paths?(q1&q2&(Parameter=value)&...)]
+
+4) Authetication
+
+# JSON (Javascript object notation)
+
+--> Javascript object 
+    var wordrobe = {
+        doors: 2,
+        drawers: 2,
+        color: "red"
+    }
+--> JSON format
+    "{doors: 2, drawers: 2, color:"red"}"
+
+# API Example : 
+
+--> https://mailchimp.com/
+
+
+--> https://kanye.rest/
+
+
+--> https://sv443.net/jokeapi/v2/
+
+
+--> https://openweathermap.org/api
+
+# More :
+
+--> https://www.youtube.com/watch?v=2CakJ-6aWK8&list=PL5E-_bTQJ4SaGLPPhiqxPp4hppYec0AYK&ab_channel=WalchandLinuxUsers%27GroupWLUG
+
+--> https://www.youtube.com/watch?v=PHWrFNTPgls&list=PL5E-_bTQJ4SaGLPPhiqxPp4hppYec0AYK&index=2&ab_channel=WalchandLinuxUsers%27GroupWLUG
+
+--> https://www.youtube.com/watch?v=BiZ7d1laYxo&list=PL5E-_bTQJ4SaGLPPhiqxPp4hppYec0AYK&index=3&ab_channel=WalchandLinuxUsers%27GroupWLUG
+
+--> https://www.youtube.com/watch?v=_u_Yrlk4wKA&list=PL5E-_bTQJ4SaGLPPhiqxPp4hppYec0AYK&index=4&ab_channel=WalchandLinuxUsers%27GroupWLUG
+
+--> https://www.youtube.com/watch?v=pVffz9N4Oxc&list=PL5E-_bTQJ4SaGLPPhiqxPp4hppYec0AYK&index=5&ab_channel=WalchandLinuxUsers%27GroupWLUG
+
+--> https://youtu.be/NxAwOjb_NlA
+
+
+# REST API (Representational State Transfer)
+
+--> Architectural Style to build API 
+--> Use Specific Pattern of Routes / Endpoint URLs
+--> Use HTTP Request Verbs 
+
+             HTTP request
+              FTP request
+             HTTPS request
+--> [Client] <-------------> [Server] <-------------> [Database]
+                 [API]
+
+# HTTP verbs 
+
+1) GET (READ)
+2) POST (CREATE)
+3) PUT (UPDATE) : Update database with new entry 
+4) PATCH (UPDATE) : Update database with modification
+5) DELETE (DELETE)

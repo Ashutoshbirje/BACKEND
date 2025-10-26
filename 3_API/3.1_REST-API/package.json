@@ -1,0 +1,22 @@
+{
+  "name": "04_wiki-api",
+  "version": "1.0.0",
+  "description": "WEB API ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "REST",
+    "API"
+  ],
+  "author": "Ashutosh Birje",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.2",
+    "nodemon": "^3.1.10"
+  }
+}

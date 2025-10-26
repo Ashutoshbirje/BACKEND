@@ -1,0 +1,59 @@
+# Node.js
+https://nodejs.org/en
+
+# Express.js 
+https://expressjs.com/
+
+# NPM 
+https://www.npmjs.com/
+
+# nodemon
+https://nodemon.io/
+
+# postman
+https://www.postman.com/
+
+# EJS
+https://ejs.co/
+
+# 
+https://github.com/mde/ejs
+
+# 
+https://github.com/remy/nodemon/issues/1459
+
+# database 
+https://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis/
+
+# SQL 
+https://sqliteonline.com/
+
+# Mongodb 
+https://www.mongodb.com/
+https://robomongo.org/
+
+#
+https://medium.com/@LondonAppBrewery
+
+# mongoose
+https://mongoosejs.com/
+
+# Moon Modeler
+
+# Eraser.io
+
+# Drow.io
+
+# JWT 
+https://www.jwt.io/
+
+# Cloudinary 
+https://cloudinary.com/
+
+# extension 
+
+1) JSON Viewer Pro 
+https://chromewebstore.google.com/detail/json-viewer-pro/eifflpmocdbdmepbjaopkkhbfmdgijcc
+
+2) Thunder Client
+# https://www.thunderclient.com/

@@ -1,0 +1,42 @@
+Full-Stack = FrontEnd + BackEnd
+
+# BackEnd 
+--> It contain server, application, database
+
+1) Server
+--> (computer)
+--> server should be on for live website for 24/7
+--> Any computer connected with network is act as server 
+
+2) Application
+--> Logic that run on server
+--> It determine how to respond to the request from brawser
+--> it sends data, status code, html etc as response
+
+3) Database
+--> It used to store data
+--> perment storage
+
+# Web Page and Web App :
+
+# BackEnd tool and technology :
+
+1) FrontEnd
+
+--> HTML, CSS, JS, REACT, ANGULAR, VUE
+
+2) BackEnd
+
+# Language
+--> JAVA, RUBY, PHP, C#, PYTHON, JAVASCRIPT
+
+# FrameWork
+--> SPRING, RAILS, LARAVEL, ASP.NET, (FLASK/JANGO), NODEJS
+
+# Need of FrameWork
+--> Provide components and Reduce overhead
+--> Provide lot of prebuilt code with dependancy
+
+# Operation on Server (GET, PUT, DELETE, POST, PATCH, OPTIONS, HEADS)
+
+# Status code 

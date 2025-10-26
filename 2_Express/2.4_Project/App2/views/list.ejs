@@ -1,0 +1,22 @@
+<%- include("header") -%>
+
+    <div class="card">
+        <!-- Dynamic Heading Based on Day -->
+        <h1><%= listTitle %></h1>
+
+        <!-- To-Do List Items -->
+        <ul>
+            <% for (var i = 0; i < newListItem.length; i++) { %>
+                <li><%= newListItem[i] %></li>
+            <% } %>
+        </ul>
+
+        <!-- Form for Adding New Items -->
+        <form action="/" method="post">
+            <input type="text" name="newItem" placeholder="Add a new task...">
+            <button type="submit" name="list" value= <%=listTitle%>>Add</button>
+        </form>
+
+    </div>
+
+    <%- include("footer") -%>

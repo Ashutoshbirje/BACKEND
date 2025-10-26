@@ -1,0 +1,16 @@
+{
+  "name": "qr-code",
+  "version": "1.0.0",
+  "description": "This is QR-code Generator",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashutosh Birje",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^12.3.0",
+    "qr-image": "^3.2.0"
+  }
+}

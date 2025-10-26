@@ -1,0 +1,88 @@
+ExpressJS:
+
+--> JS FrameWork
+--> Used to build efficent BackEnd application  
+--> We can optimize node code using (ExpressJS + node)
+--> Readability , Less Code , Middleware
+ 
+# Step to set up
+
+1) Step 1 : 
+--> CMD : To intialize npm project 
+--> npm init / npm init -y
+
+2) Step 2 :
+--> Create a file index.js (Entry point)
+
+3) Step 3 :
+--> CMD : To install expressjs
+--> npm install expressjs
+
+4) Step 4 :
+--> CMD : To install nodemon
+--> npm install nodemon
+
+# ExpressJS Installation
+
+CMD : npm install express --save
+CMD : npm install express --no-save
+CMD : npm install express
+
+# nodemon
+
+--> utility that can be install using npm 
+--> monitor for any changes in your source and automatically restart your server. Perfect for development.
+
+# nodemon Installation
+
+CMD : npm install -g nodemon
+CMD : nodemon -v
+
+# nodemon Setup for continue working mode
+
+CMD : nodemon server.js 
+CMD : npx nodemon server.js
+
+# body parse
+--> To access data from post method
+
+CMD : npm install body-parser
+
+# Request 
+
+1) GET : to fetch the data
+2) POST : to save the data with new entry
+3) PUT : to update the data from existing entry
+4) DELETE : to delete existing entry
+
+# Response
+
+# Middleware 
+
+--> REQUEST ------------> Response
+--> REQUEST ---- (MIDDLEWARE) ---- RESPONSE
+--> REQUEST ---- (Logging -> Auth -> validate) ---- RESPONSE
+
+--> To change Request
+--> To log / Print data using Request
+--> To validate data 
+
+--> If we want to build login - signup in which admin and student 
+    role is here to identify that we have Middleware section to 
+    do this identification 
+
+# Type of Middleware
+
+--> Application-level Middleware
+--> Router-level Middleware 
+--> Error-handling Middleware
+--> Built-in Middleware
+--> Third-party Middleware
+
+--> Route - specific Middleware
+
+# EJS (Embedded Javascript templating)
+
+# Scope 
+1) Local variable 
+2) Globle variable

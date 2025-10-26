@@ -1,0 +1,49 @@
+# Authentication 
+
+Need
+--> Login - SignUp
+--> Keep track Of data across each USER
+--> Restrict Access 
+
+# Encryption (mongoose-encryption)
+--> Ceaser Chipher 
+
+# Hashing (md5)
+--> No need of key 
+--> Hash Function is used for E and D 
+--> Password --> Hash 
+
+# Salting / Salt Rounds (bcrypt)
+--> Password + Random --> Hash 
+
+# Cookies 
+--> Amazon > Action > Google > settings > cookie > See all cookie and site data > 
+
+# Session 
+--> Lifespan of cookies 
+
+# OAuth (OPEN Authorisation)
+
+Need 
+--> Granular Access Levels 
+--> Read + Write Access / Read Access 
+--> Revoke Access 
+
+STEP
+1) Set Up Your App 
+2) Redirect to Authnticate 
+3) User Logs In 
+4) User Grants Permission 
+5) Receive Authorisation code 
+6) Exchange AuthCode for Access Token 
+
+https://cryptii.com/
+
+#
+http://plaintextoffenders.com/
+
+#
+http://passward-checker.online-domain-tools.com/
+
+#
+https://www.passportjs.org/

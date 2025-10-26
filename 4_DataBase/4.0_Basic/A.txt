@@ -1,0 +1,236 @@
+# Database
+
+# SQL VS NOSQL
+
+                 |             SQL               |              NOSQL                |
+--------------------------------------------------------------------------------------
+    Structure    | Group data into table / not   | Group data into Json object , key 
+                 | flexible / must be regular /  | value pair / flexible / Irr- 
+                 | cavity cannot be allowed if   | regular / not bound to particular 
+                 | there it can be replace with  | structure
+                 | null value (Relational DB)    | (Non Relational DB)
+---------------------------------------------------------------------------------------
+  Relationship   | Group related data into as    | Group related data into as many 
+                 | many tables (cust/pro/order)  | json object
+---------------------------------------------------------------------------------------
+  Scalability    | worst / vertical scale        | Best / horizontal scale 
+---------------------------------------------------------------------------------------
+    Example      | MySQL, PostgreSQL, Oracle     | Mongodb, cassandra, Neo4j
+---------------------------------------------------------------------------------------
+                 | Table Structure               | Document Structure
+---------------------------------------------------------------------------------------
+                 | Requires a Schema             | More Flexible to change
+---------------------------------------------------------------------------------------
+                 | Best with Relationship        | worst with Relationship
+---------------------------------------------------------------------------------------
+
+# SQL: (Steuctural Query Language)
+
+--> Programming language used to interact with relational database 
+
+# Query 
+
+> CREATE DATABASE db_name;
+> CREATE DATABASE IF NOT EXISTS db_name;
+> DROP DATABASE db_name;
+> DROP DATABASE IF EXISTS db_name;
+> SHOW DATABASES;
+> SHOW TABLES;
+> USE db_name;
+> CREATE TABLE table_name (
+   column_name Data_type (size) constraint,
+   column_name Data_type (size) constraint,
+   column_name Data_type (size) constraint 
+  )
+> INSERT INTO TABLE 
+  (col1,col2,col3 ...);
+  VALUES 
+  (v1,v2,v3 ...),
+  (v1,v2,v3 ...);
+> SELECT * FROM table_name
+> UPDATE 
+> ALTER 
+> TRUNCATE (Delete table data)
+> DELETE (Delete table along with table data)
+
+# CRUD : (Create / Read / Update / Destroy)
+
+# MongoDB :
+
+--> NOSQL database 
+--> data stored in document / json format 
+
+# Installation :
+
+--> SetUp
+    1) Download from mongodb.org
+    2) C:Drive > data > db  (create Data and db folder )
+    3) C:\Program Files\MongoDB\Server\version\bin
+    4) Run MongoDB (mongod)
+       > cd c:\mongodv-1.6.3\bin
+       > mongod
+    5) Run Mongo shell (mongo)
+       > mongo
+
+--> Help 
+    1) https://medium.com/p/4ee4b3493514 
+
+--> Connection > Database > Collection
+--> Collection in the MongoDB is group of MongoDB Document
+
+# MongoDB Campass : 
+
+--> GUI tool 
+--> Uses Local host resource
+--> Add new connection > create collection > Add data  
+--> create database 
+
+# MongoDB Atlas : 
+
+--> https://cloud.mongodb.com/
+--> Uses Cloud Storage resource
+--> Create cluster
+--> Atlas and Campass connection > go to Campass >  pasete Connection link at URL link
+
+# Mongo Shell :
+
+--> Command: > mongo
+--> Command: > help()
+--> Command: > show dbs
+--> Command: > use <dbname>
+--> Command: > show collection
+--> Command: > db.collectionName.findOne()
+--> Command: > db.collectionName.find()
+--> Command: > db.help()
+--> Command: > db.collectionName.help()
+
+# Extension : 
+
+--> MongoDB (Vscode)
+--> How to setup in VsCode
+--> Select extension > connections > Click on add new collection (+) > connect with collection string > 
+    > add collection string (Atlas > Connect > Campass > key )
+
+# Connection with Backend :
+
+--> https://www.topcoder.com/thrive/articles/how-to-connect-mongodb-to-node-js-using-mongoose
+
+--> [Backend] --> mongoose --> [DataBase]
+      OBJ                       document
+
+1) Mongoose
+
+--> It is library used by Backend
+--> promise-based Object Data Modleing library
+
+# Schema 
+
+--> Blue print / template
+
+# Model 
+
+--> Utilizes Schema / toolbox to perform (CRUD)
+
+# STEP :
+
+--> DB connection (db.js)
+--> Create .env configuration
+--> Create model
+--> perform operation
+--> postman 
+--> verify data manipulation 
+
+# MVC pattern (Model view controller)
+
+--> Model : Tool to intract with DB (CRUD logic)
+--> View : User interface
+--> Controller : Business logic
+
+# Structure 
+
+--> FrontEND >> REQ >> Express >> route >> controler >> logic + model >> RES
+
+2) MongoDB native driver 
+
+
+
+
+# Model: 
+
+--------------------------------------------------------------
+
+Method 1:
+
+import mongoose from "mongoose";
+
+const userSchema = new mongoose.schema({})
+
+export const User = mongoose.model("DB_NAME", userSchema);
+
+--------------------------------------------------------------
+
+Method 2:
+
+const {model,schema} = require("mongoose");
+
+const userSchema = new schema({});
+
+const userModel = model("DN_NAME", userSchema);
+
+module.exports = userModel;
+
+--------------------------------------------------------------
+
+# DB connection 
+
+--------------------------------------------------------------
+
+Method 1:
+
+import mongoose from "mongoose";
+import { DB_NAME } from "./constants.js";
+import express from "express";
+import dotenv from "dotenv";
+
+const app =  express();
+dotenv.config();
+
+(async ()=>{
+  try {
+    await mongoose.connect(`${process.env.MONGODB_URL}/${DB_NAME}`)
+    app.on("error",(error)=>{
+        console.log("ERROR", error);
+        throw error;
+    })
+    app.listen(process.env.PORT, ()=>{
+        console.log(`Server is running at PORT ${process.env.PORT}`);
+    })
+  } catch (error) {
+    console.error("ERROR: ", error)
+    throw error;
+  }
+})();
+
+--------------------------------------------------------------
+
+Method 2:
+
+import mongoose from "mongoose";
+import { DB_NAME } from "../constants.js";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const connectDB = async () => {
+  try {
+    const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URL}/${DB_NAME}`)
+    console.log("MongoDB connected !");
+    console.log(`DB HOST: ${connectionInstance.connection.host}`);
+  } catch (error) {
+    console.log("Error : ", error);
+    process.exit(1);
+  }
+};
+
+export default connectDB;
+

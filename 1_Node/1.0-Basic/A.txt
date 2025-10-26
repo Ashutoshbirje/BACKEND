@@ -1,0 +1,253 @@
+# NODEJS:
+
+--> Open Source server environment
+--> An asynchronous event-driven javascript runtime, built on Google's open source V8 engine 
+--> Node.js is designed to build scalable network application
+--> It allow us to build an application using javascript / to run JS on the server
+--> It is an runtime environment in which we are able to run JS
+
+# Event-Driven Architecture 
+
+                  emits event         calls event handler
+-->   Event Emitter ----> Event listener ----> Event Handler
+
+# Javascript runtime:
+--> In old day JS is only used in brawser
+--> Any kind of JS nativly runs in the brawser as it contains JS engine to run JS code (2009)
+--> JS engine is a tool that require by the brawser to execute and run JS code 
+--> As Node comes into play JS allows to use in application
+
+# asynchronous event-driven:
+--> No any sequential order to perform task
+
+# About:
+--> Node.js runs single-threaded, non-blocking, asynchronous programming which is very memory efficient.
+--> Code is executaed line by line
+--> Node is combo of (V8 engine + C++)
+--> Node.js is a runtime environment to executing JS code, It contains JS engine (V8) which can execute javascript code 
+--> Node.js Provides API and modules
+--> Node.js is a program that includes V8 javascript and some additional API gives capability to run outside of the brawser
+--> It support all version of JS
+
+# What ?
+--> It generate dynamic page Content
+--> Create, open, write, delete and close files on the server
+--> collect from data
+--> Perform CURD operation on database
+
+# Why ? 
+--> JS can be used in both FrontEnd and BackEnd 
+--> Scales
+--> Non-blocking
+--> Ecosystem (npm)
+--> Perfect for building fast and scalable data intensive application
+
+# Use
+--> Web-Dev , IOT device , DESKTOP Application
+
+# NODEJS File
+--> It has extension ".js"
+--> contain tasks that will be executed on certain events
+
+# Installation :
+
+--> https://nodejs.org/en
+
+# Content :
+
+--> https://nodejs.org/docs/latest/api/
+
+CMD: To check the version 
+--> node -V
+--> node --version
+
+Node REPL(Read Eval Print Loop)
+--> Work with JS
+--> It is a computer environment where user inputs are read and 
+    evaluated, and then the result are returned to the user
+--> Read (read user input) / Eval (Evaluate user input) / Print (Print or output the result) / Loop (Return and wait for new input)
+
+CMD: To enter into the REPL
+-->  node 
+--> .help
+--> .exit (Ctrl + C)
+--> (_) : Special variable which store result of the previos expression
+
+CMD: To run JS Files
+
+--> node index.js
+
+# Module:
+--> Same as JS library
+--> A set of function you want to include in your application 
+--> There are lot of node modules which is inbuit in nature in Node.js
+
+# Native Node Module:
+--> Node had while bunch of feature built into it
+
+# Node Package Manager (NPM):
+--> Used to access Open Source node packages
+--> it is a collection module which is build for node 
+--> Created by github organization
+--> Community tool library
+--> open source
+--> It comes pre bunddle with node 
+--> Pacakage repository and CLI
+
+# Content: 
+
+--> https://www.npmjs.com/
+
+CMD: To intialize npm project 
+--> npm -v
+--> npm init 
+--> Fill all the data and at the end you will create package.json (configuration file)
+--> npm init -y 
+--> skip all step and direct create package.json
+
+CMD: To install NPM package
+--> npm install <somthing>
+--> npm i <somthing>
+--> npm install 
+
+# Types of packages and instalaltion 
+
+--> Regular dependencies 
+    - A package is called as a simple / regular dependency if the working of our application 
+      / the code which we are writting, depends on that package
+    - Ex. Express  
+
+--> Development dependencies 
+    - A package is called as development dependancy if that package is only required for the development purpose 
+      and on which, the working of our aplication does not dependant
+    - Ex. nodemon
+    - Ex. npm install nodemon --save-dev
+
+--> Local installation 
+    - The package is only available in that project folder, where the package is installed
+    - It can not be used outside of that folder
+    - Ex npm install nodemon 
+
+--> Global installation
+    - The package is installed globally in the machine 
+    - it can be accesssed from any folder / any project directory
+    - Ex npm i -g nodemon
+
+# Javascript: (CJS)
+--> default type in package.json is commonjs
+--> Ex. var generateName = require("sillyname");
+
+# ECMAScript Modules:(ESM)
+--> Add "type":"module", to package.json
+--> Now we are allow to use import keyword
+--> Ex. import generateName from "sillyName";
+
+# Custom Module:
+
+--> export keyword 
+
+# Sync Code : 
+
+--> Each code in the code executed line by line in order they are written in the code 
+--> Block next code while executing current code 
+
+# Async Code : 
+
+--> Code is running at the background 
+--> callback function
+
+# working of Web :
+
+                  req
+--> [Client] <--[TCP/IP]--> [Server]
+                  res
+--> req-res model / Client-server architecture
+--> Server have IP address 
+--> URL/ Doamin name --[DNS]--> IP address
+--> Domain name server 
+--> Fetch from cache / Uses TCP/IP protocol suite
+--> Connection is made by TCP/IP between client and server
+--> Send HTTP request to the server (GET / PUT / DELETE / POST)
+
+--> Run Node application
+--> inspect > network > fetch all Request and Response
+
+# Routing
+
+--> It defines the way in which client requests are handled by the application endpoints
+--> File based URL and Resource based URL
+--> Applcation can be make as responding to diffrent URL with diffrent responses using Routing
+--> Routing means implementing diffrent actions for diffrent URLS 
+--> Those action can be implemented in diffrent ways 
+--> RootURL/Route/Route_Parameter
+--> Ex. www.google.com/rule/404
+--> RootURL/Route/Query_string
+--> Ex. www.google.com/rule?statuscode=404&request=GET
+
+# Set header for the Response
+
+--> By default 200 statuscode is used 
+--> Header / Status code is set before sending the responses
+
+# JSON data handling (Java script Object Notation)
+
+# Parsing Query String from URL 
+
+# Stream 
+
+--> while reading the file , file is content readed and stored into the read buffer at once
+--> while writing the file , file is content write into the write buffer at once and then write into file
+--> source file --> [Read stream] --> [Read Buffer] --> [fs.readFile]
+--> destination file <-- [write stream] <-- [write Buffer] <-- [fs.writeFile]
+
+--> Stream : Process data piece by piece instead of reading / writing the whole data at once
+--> Streaming makes the data processing more efficient in terms of memory
+--> There is no need to keep all the data in the memory
+--> It increases performance and time 
+
+# types of stream 
+
+--> Readable stream 
+    - The readable streams are the one from where we can read or consume data chunk by chunk
+    - Ex. Request stream, Read file stream
+    - stream event : date , end
+    - stream method : read , pipe
+
+--> writetable stream 
+    - The writable streams are the one to which wee can write data chunk by chunk
+    - Ex. Response stream, write file stream
+    - stream event : drain , finish
+    - stream method : write , end 
+
+--> Duplex stream
+    - it is both readable and writable at same time
+    - web socket
+
+--> Transform stream 
+    - It is a Duplex streams which can also modify / transform data as it is read / write
+    - zlib
+
+# Architecture of NODE JS 
+
+--> (https://www.youtube.com/watch?v=59C1dvLRIrI&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=27&ab_channel=procademy)
+
+--> Node dependancy are library on which node js is dependent
+--> Ex. V8 , LIBUV
+--> V8 
+    - Convert JS code into machine code 
+--> LIBUV 
+    - gives access to resource and other things
+    - Event Loop and thread pool 
+--> Proess
+    - It is a programm which is currently executing
+    - It failates the execution of a program  
+--> Thread 
+    - It is resposible for executing a program code in the process
+    - Every process has one main thread 
+
+# Event Loop 
+
+--> https://www.youtube.com/watch?v=5F4iO-W0ZbY&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=29&ab_channel=procademy
+
+--> https://www.youtube.com/watch?v=jxAXonX9Ao4&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=29&ab_channel=procademy
+
